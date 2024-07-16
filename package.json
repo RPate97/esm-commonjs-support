@@ -1,0 +1,21 @@
+{
+  "name": "@rpate97/esm-commonjs-support",
+  "version": "1.0.1-canary.0",
+  "description": "A simple example of building an ESM package with pure ESM dependencies for CommonJS",
+  "author": "Ryan Pate",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "scripts": {
+    "build:tsc": "yarn tsc -p tsconfig.json",
+    "build": "vite-node ./scripts/build.ts && yarn build:tsc",
+    "test:cjs": "node ./scripts/test.cjs",
+    "test:esm": "vite-node ./scripts/test.ts"
+  },
+  "dependencies": {
+    "esbuild": "^0.23.0",
+    "nanoid": "^5.0.7",
+    "typescript": "^5.5.3",
+    "vite-node": "^2.0.3"
+  }
+}
